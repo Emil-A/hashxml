@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<widgets lsr="4.0.13" ldr ="4.0.0-rc1">
+	<dir name="themes-dist-4.0.17-gcweb">
+		<file name="theme.min.css" hash="1360564351 " />
+		<file name="details.min.js" hash="10" />
+		<file name="datepicker.min.js" hash="1726631536" />
+		<file name="en.min.js" hash="-30223351" />
+		<file name="wet-boew.min.js" hash="1697526333" />
+	</dir>
+
+	<dir name="themes-dist-4.0.18-gcweb">
+		<file name="theme.min.css" hash="1360564351 " />
+		<file name="details.min.js" hash="10" />
+		<file name="datepicker.min.js" hash="1726631536" />
+		<file name="en.min.js" hash="-30223351" />
+		<file name="wet-boew.min.js" hash="1697526333" />
+	</dir>
+
+	<dir name="themes-dist-4.0.19-gcweb">
+		<file name="theme.min.css" hash="10 " />
+		<file name="details.min.js" hash="1031101302 " />
+		<file name="datepicker.min.js" hash="46" />
+		<file name="en.min.js" hash="-30223351" />
+		<file name="wet-boew.min.js" hash="1697526333" />
+	</dir>
+	
+</widgets>
