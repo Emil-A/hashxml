@@ -1,6 +1,7 @@
 var fs = require('fs');
 var DOMParser = require('xmldom').DOMParser;
 var parser = new DOMParser();
+var XMLHttpRequest = require('xhr2');
 //var xmlDoc=parser.parseFromString("wetHashFiles.xml","text/xml");
 
 var theme, link;
@@ -63,33 +64,38 @@ var getHash = function (str) {
 	return hash;
 } // End of getHash
 
+
+//put this in wwvf instead, it will run with domparser properly
 var writeHashes = function (theme) {
-	newDir = doc.createElement('dir');
-	newDir.setAttribute("name", theme+"-4.0.19");
-	root.appendChild(newDir);
+	//newDir = doc.createElement('dir');
+	//newDir.setAttribute("name", theme+"-4.0.19");
+	//root.appendChild(newDir);
+	console.log(theme+"-4.0.19");
 	
 	for (var i = 0; i < links.length; i++) {
 		link = links[i];
-		getRemoteFile (url, function (link) {
-			if (links[i] == "404") {
+		getRemoteFile (link, function (page) {
+			if (page == "404") {
 				showError();
 				if (callback != undefined) callback(false);
 			//no issues getHash of the links[i] page content
 			} else {
-				newFile = doc.createElement('file');
+				console.log(link.split('/').pop()+" "+getHash(page));
+				//newFile = doc.createElement('file');
 				//set attribute name to filename of link and hash to hash returned
-				newFile.setAttribute("name", links[i].split('/').pop());
-				newFile.setAttribute("hash",getHash(links[i]));
-				newDir.appendChild(newFile);
+				//newFile.setAttribute("name", links[i].split('/').pop());
+				//newFile.setAttribute("hash",getHash(links[i]));
+				//newDir.appendChild(newFile);
+				
 			}
 		});
 	}
 } // End of writeHashes
 
 
-var doc = new DOMParser().parseFromString( '<widgets lsr="4.0.13" ldr ="4.0.0-rc1">\n'+'</widgets>','text/xml');
-var root = doc.getElementsByTagName('widgets');
-var  newDir, newFile;
+//var doc = new DOMParser().parseFromString( '<widgets lsr="4.0.13" ldr ="4.0.0-rc1">\n'+'</widgets>','text/xml');
+//var root = doc.getElementsByTagName('widgets');
+//var  newDir, newFile;
 
 //add gcweb/canada.ca theme hashes
 theme = "GCWeb"
