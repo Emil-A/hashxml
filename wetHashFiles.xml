@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <widgets lsr="4.0.13" ldr ="4.0.0-rc1">
+
 	<dir name="themes-dist-4.0.17-gcweb">
 		<file name="theme.min.css" hash="1360564351 " />
 		<file name="details.min.js" hash="10" />
@@ -23,6 +23,38 @@
 		<file name="datepicker.min.js" hash="46" />
 		<file name="en.min.js" hash="-30223351" />
 		<file name="wet-boew.min.js" hash="1697526333" />
+	</dir>
+	
+	<dir name="themes-dist-4.0.20-gcweb">
+		<file name="theme.min.css" hash="-1478277110" />
+		<file name="wet-boew.min.js" hash="869730163" />
+		<file name="theme.min.js" hash="929411640" />
+		<file name="details.min.js" hash="-1929477180" />
+		<file name="details.min.css" hash="-1841424775" />
+		<file name="datepicker.min.js" hash="-654315347" />
+		<file name="datepicker.min.css" hash="1526840196" />
+		<file name="en.min.js" hash="-257603066" />
+	</dir>
+	
+	<dir name="themes-dist-4.0.20-theme-gc-intranet">
+		<file name="theme.min.css" hash="1860086798" />
+		<file name="wet-boew.min.js" hash="869730163" />
+		<file name="theme.min.js" hash="-1403335484" />
+		<file name="details.min.js" hash="-1929477180" />
+		<file name="details.min.css" hash="-1841424775" />
+		<file name="datepicker.min.js" hash="-654315347" />
+		<file name="datepicker.min.css" hash="1526840196" />
+	</dir>
+	
+	<dir name="themes-dist-4.0.20-theme-gcwu-fegc">
+		<file name="theme.min.css" hash="-1118668067" />
+		<file name="wet-boew.min.js" hash="869730163" />
+		<file name="theme.min.js" hash="378588119" />
+		<file name="details.min.js" hash="-1929477180" />
+		<file name="details.min.css" hash="-1841424775" />
+		<file name="datepicker.min.js" hash="-654315347" />
+		<file name="datepicker.min.css" hash="1526840196" />
+		<file name="en.min.js" hash="-257603066" />
 	</dir>
 	
 </widgets>

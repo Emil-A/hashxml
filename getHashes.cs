@@ -47,10 +47,12 @@ public static class UpdateXml
 		return hash;
 	}
 	
-	public static void writeHash(string theme)
+	public static void writeHash(string theme, string path)
 	{
-		string path = @"C:\Users\emil.a.aite\Downloads\themes-dist-4.0.18-gcweb\themes-dist-4.0.18-gcweb";
 		string fileText;
+		string fileName;
+		string dirName;
+		int hash;
 		string[] links = new string[13] {
 		path+"/"+theme+"/css/theme.min.css",
 		path+"/wet-boew/js/wet-boew.min.js",
@@ -59,18 +61,37 @@ public static class UpdateXml
 		path+"/wet-boew/css/polyfills/details.min.css",
 		path+"/wet-boew/js/polyfills/datepicker.min.js",
 		path+"/wet-boew/css/polyfills/datepicker.min.css",
-		path+"/wet-boew/js/i18n/en.min.js",
-		path+"/wet-boew/js/polyfills/details.min.js",
-		path+"/wet-boew/css/polyfills/details.min.css",
-		path+"/wet-boew/js/polyfills/datepicker.min.js",
-		path+"/wet-boew/css/polyfills/datepicker.min.css",
 		path+"/wet-boew/js/i18n/en.min.js"};
+		
+		dirName = Path.GetFileName(path);
+		Console.WriteLine(); 
+		XmlDocument doc = new XmlDocument();
+		
+		XmlWriter xmlWriter = XmlWriter.Create("./test.xml");
+
+		xmlWriter.WriteStartDocument();
+		xmlWriter.WriteStartElement("widgets");
+
+		xmlWriter.WriteStartElement("dir");
+		xmlWriter.WriteAttributeString("name", dirName);
 		
 		for(int i=0; i < links.Length; i++){
 			fileText = File.ReadAllText(@links[i]);
-			Console.WriteLine(UpdateXml.getHash(fileText));
+			fileName = Path.GetFileName(links[i]);
+			hash = UpdateXml.getHash(fileText);
+			
+				xmlWriter.WriteStartElement("file");
+				xmlWriter.WriteAttributeString("name", fileName);
+				xmlWriter.WriteAttributeString("hash", hash.ToString());
+				xmlWriter.WriteEndElement();
+			
+			Console.WriteLine(fileName + ": " + hash);
 		}	
+		xmlWriter.WriteEndElement();
+		xmlWriter.WriteEndDocument();
+		xmlWriter.Close();
 	}
+
 }
 
 class RunUpdate
@@ -78,12 +99,15 @@ class RunUpdate
 
 	static void Main()
 	{
-		XmlDocument doc = new XmlDocument();
+		string path; 		
+		//path = @"C:\Projects\hashxml\cdn_folders\themes-dist-4.0.20-gcweb\themes-dist-4.0.20-gcweb\";
+		//UpdateXml.writeHash("GCWeb", path);
+
+		//path = @"C:\Projects\hashxml\cdn_folders\themes-dist-4.0.20-theme-gc-intranet\themes-dist-4.0.20-theme-gc-intranet\";
+		//UpdateXml.writeHash("theme-gc-intranet", path);
 		
-		//String xmlText = File.ReadAllText(@"wetHashFiles.xml");
-		Console.WriteLine("Hello");
-		UpdateXml.writeHash("GCWeb");
-		//Console.WriteLine(UpdateXml.getHash(xmlText));
+		path = @"C:\Projects\hashxml\cdn_folders\themes-dist-4.0.20-theme-gcwu-fegc\themes-dist-4.0.20-theme-gcwu-fegc\";
+		UpdateXml.writeHash("theme-gcwu-fegc", path);
 		
 
 	}
