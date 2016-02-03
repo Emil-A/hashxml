@@ -53,7 +53,7 @@ public static class UpdateXml
 		string fileName;
 		string dirName;
 		int hash;
-		string[] links = new string[13] {
+		string[] links = new string[8] {
 		path+"/"+theme+"/css/theme.min.css",
 		path+"/wet-boew/js/wet-boew.min.js",
 		path+"/"+theme+"/js/theme.min.js",
@@ -62,6 +62,7 @@ public static class UpdateXml
 		path+"/wet-boew/js/polyfills/datepicker.min.js",
 		path+"/wet-boew/css/polyfills/datepicker.min.css",
 		path+"/wet-boew/js/i18n/en.min.js"};
+		
 		
 		dirName = Path.GetFileName(path);
 		Console.WriteLine(); 
@@ -100,14 +101,14 @@ class RunUpdate
 	static void Main()
 	{
 		string path; 		
-		//path = @"C:\Projects\hashxml\cdn_folders\themes-dist-4.0.20-gcweb\themes-dist-4.0.20-gcweb\";
-		//UpdateXml.writeHash("GCWeb", path);
+		path = @"C:\Projects\hashxml\cdn_folders\themes-dist-4.0.16-gcweb\themes-dist-4.0.16-gcweb";
+		UpdateXml.writeHash("GCWeb", path);
 
-		//path = @"C:\Projects\hashxml\cdn_folders\themes-dist-4.0.20-theme-gc-intranet\themes-dist-4.0.20-theme-gc-intranet\";
+		//path = @"C:\Projects\hashxml\cdn_folders\themes-dist-4.0.16-theme-gc-intranet\themes-dist-4.0.16-theme-gc-intranet";
 		//UpdateXml.writeHash("theme-gc-intranet", path);
 		
-		path = @"C:\Projects\hashxml\cdn_folders\themes-dist-4.0.20-theme-gcwu-fegc\themes-dist-4.0.20-theme-gcwu-fegc\";
-		UpdateXml.writeHash("theme-gcwu-fegc", path);
+		//path = @"C:\Projects\hashxml\cdn_folders\themes-dist-4.0.16-theme-gcwu-fegc\themes-dist-4.0.16-theme-gcwu-fegc";
+		//UpdateXml.writeHash("theme-gcwu-fegc", path);
 		
 
 	}
