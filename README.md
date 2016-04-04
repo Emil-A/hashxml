@@ -13,6 +13,6 @@ It will need to be updated with new versions every couple of months, stable rele
 http://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html
 
 ex: v4.0.20 GCWeb Theme
-![extension screenshot](https://raw.githubusercontent.com/Emil-A/hashxml/master/images/screenshot.png)
+![console screenshot](https://raw.githubusercontent.com/Emil-A/hashxml/master/images/screenshot.png)
 
 *The process could be improved to be more efficient by taking in what version/type of XML to generate in command line arguments, never got around to it.
