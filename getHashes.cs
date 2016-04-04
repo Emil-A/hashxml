@@ -1,6 +1,6 @@
 /*
 * This file should be compiled to an executable and ran to create an executable to run.
-* The executable stores hashes of all files scraped from the links into test.xml 
+* The executable stores hashes of all files scraped from the links into temp.xml 
 */
 using System;
 using System.Xml;
@@ -37,7 +37,7 @@ public static class UpdateXml
 		string fileText;
 		string fileName;
 		string dirName;
-		string fileLocation = "./test.xml";
+		string fileLocation = "./temp.xml";
 		int hash;
 		List<string> links = new List<string>();
 		//Versions 15+
