@@ -1,3 +1,7 @@
+/*
+* This file should be compiled to an executable and ran to create an executable to run.
+* The executable stores hashes of all files scraped from the links into test.xml 
+*/
 using System;
 using System.Xml;
 using System.IO;
@@ -114,6 +118,7 @@ class RunUpdate
 
 	static void Main()
 	{
+		//This is pretty inefficient, probably better to take in command line args and run each of theese 
 		string path; 		
 		path = @"C:\Projects\hashxml\cdn_folders\themes-dist-4.0.21-gcweb\themes-dist-4.0.21-gcweb";
 		UpdateXml.writeHash("GCWeb", path);
